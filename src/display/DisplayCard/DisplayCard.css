@@ -1,0 +1,31 @@
+.basic-card {
+  all: unset;
+  border-style: solid;
+  padding-right: 1em;
+  padding-left: 1em;
+  box-shadow: 10px 5px 5px gray;
+}
+
+.basic-card.selected {
+  border-style: dashed;
+  border-color: aqua;
+}
+
+.has-acted {
+  position: relative;
+  float: right;
+  color: red;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+}
+
+.card-with-dropdown:hover .dropdown {
+  display: block;
+}
+
+.menu-button {
+  all: unset;
+}
