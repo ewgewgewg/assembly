@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/assembly/static/css/main.89bdfa59.css",
-    "main.js": "/assembly/static/js/main.3c99c46c.js",
+    "main.js": "/assembly/static/js/main.8b5b38a8.js",
     "static/js/787.caf32895.chunk.js": "/assembly/static/js/787.caf32895.chunk.js",
     "index.html": "/assembly/index.html",
     "main.89bdfa59.css.map": "/assembly/static/css/main.89bdfa59.css.map",
-    "main.3c99c46c.js.map": "/assembly/static/js/main.3c99c46c.js.map",
+    "main.8b5b38a8.js.map": "/assembly/static/js/main.8b5b38a8.js.map",
     "787.caf32895.chunk.js.map": "/assembly/static/js/787.caf32895.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.89bdfa59.css",
-    "static/js/main.3c99c46c.js"
+    "static/js/main.8b5b38a8.js"
   ]
 }
