@@ -1,9 +1,21 @@
-const handleReadyAction = (allLocations, layer, side, index) => {
+const handleReadyAction = (allLocations, layer, side, index, setSelected) => {
   if (!allLocations.Ready[0].length) return;
+  const [type, sourceSide, sourceIndex, sourceLayer, setHasActed] =
+    allLocations.Ready[0];
+
+  if (sourceSide === side && sourceIndex === index && sourceLayer === layer) {
+    setSelected(false);
+    allLocations.Ready[1]([]);
+    return;
+  }
+
   const action = allLocations.Ready[0][0];
   if (action === "attack") {
-    const attackerIndex = allLocations.Ready[0][2];
-    const attackerSide = side === "A" ? "B" : "A";
+    //can only attack same layer of opposite side
+    if (layer !== sourceLayer || side === sourceSide) return;
+
+    const attackerIndex = sourceIndex;
+    const attackerSide = sourceSide;
     const attackerField = allLocations[attackerSide + "Field"][0];
     const attacker = attackerField[attackerIndex];
     const attackerPower = attacker.strength;

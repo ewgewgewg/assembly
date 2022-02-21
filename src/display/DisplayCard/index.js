@@ -69,7 +69,7 @@ const DisplayCard = ({ source, allLocations, layer, side, index, turn }) => {
     <div className="card-with-dropdown" key={`card${index}`}>
       <button
         className={`basic-card ${selected && "selected"}`}
-        onClick={() => handleReadyAction(allLocations, layer, side, index)}
+        onClick={() => handleReadyAction(allLocations, layer, side, index, setSelected)}
       >
         {layer === "line" && <div>[{`${index + 1}`}]</div>}
         {layer === "field" && hasActed && <div className="has-acted">A</div>}
