@@ -6,6 +6,7 @@ const displaySeq = (source, setSource, allLocations, layer, side, turn) => {
   for (let i = 0; i < source.length; i++) {
     seq.push(
       <DisplayCard
+        key={i}
         source={source[i]}
         allLocations={allLocations}
         layer={layer}

@@ -38,7 +38,7 @@ const DisplayCard = ({ source, allLocations, layer, side, index, turn }) => {
     field: [
       <button
         className="menu-button"
-        key="menu1"
+        key="menu2"
         onClick={() => scorePoint(allLocations, hasActed, setHasActed, side)}
       >
         Build
@@ -66,10 +66,12 @@ const DisplayCard = ({ source, allLocations, layer, side, index, turn }) => {
   const showOnHover = clickableMenu[layer];
 
   return (
-    <div className="card-with-dropdown" key={`card${index}`}>
+    <div className="card-with-dropdown">
       <button
         className={`basic-card ${selected && "selected"}`}
-        onClick={() => handleReadyAction(allLocations, layer, side, index, setSelected)}
+        onClick={() =>
+          handleReadyAction(allLocations, layer, side, index, setSelected)
+        }
       >
         {layer === "line" && <div>[{`${index + 1}`}]</div>}
         {layer === "field" && hasActed && <div className="has-acted">A</div>}
